@@ -145,26 +145,26 @@ function competitionScene(Actor, World)
     World.add(red_circle, Actor);
     
 	% @brief Creates the yellow square at the beginning of the L-shape.
-    yellow_square = sim3d.Actor('ActorName', 'yellow_square');
-    createShape(yellow_square, 'box', [0.2 0.2 0.01]); % 20cm x 20cm, paper thickness
-    yellow_square.Color = [1 1 0]; % Yellow color
-    yellow_square.Shininess = 0.2;
-    yellow_square.Metallic = 0;
-    yellow_square.Specular = 0.5;
-    yellow_square.Friction = 0.7;
-    yellow_square.Restitution = 0.3;
-    yellow_square.Translation = [0.5 2 0.02];
-    World.add(yellow_square, Actor);
+    % yellow_square = sim3d.Actor('ActorName', 'yellow_square');
+    % createShape(yellow_square, 'box', [0.2 0.2 0.01]); % 20cm x 20cm, paper thickness
+    % yellow_square.Color = [1 1 0]; % Yellow color
+    % yellow_square.Shininess = 0.2;
+    % yellow_square.Metallic = 0;
+    % yellow_square.Specular = 0.5;
+    % yellow_square.Friction = 0.7;
+    % yellow_square.Restitution = 0.3;
+    % yellow_square.Translation = [0.5 2 0.02];
+    % World.add(yellow_square, Actor);
     
 	% @brief Creates the blue square at the beginning of the L-shape.
-    blue_square = sim3d.Actor('ActorName', 'blue_square');
-    createShape(blue_square, 'box', [0.2 0.2 0.01]); % 20cm x 20cm, paper thickness
-    blue_square.Color = [0 0 1]; % Blue color
-    blue_square.Shininess = 0.2;
-    blue_square.Metallic = 0;
-    blue_square.Specular = 0.5;
-    blue_square.Friction = 0.7;
-    blue_square.Restitution = 0.3;
-    blue_square.Translation = [0.5 2.5 0.02];
-    World.add(blue_square, Actor);
+    % blue_square = sim3d.Actor('ActorName', 'blue_square');
+    % createShape(blue_square, 'box', [0.2 0.2 0.01]); % 20cm x 20cm, paper thickness
+    % blue_square.Color = [0 0 1]; % Blue color
+    % blue_square.Shininess = 0.2;
+    % blue_square.Metallic = 0;
+    % blue_square.Specular = 0.5;
+    % blue_square.Friction = 0.7;
+    % blue_square.Restitution = 0.3;
+    % blue_square.Translation = [0.5 2.5 0.02];
+    % World.add(blue_square, Actor);
 end
