@@ -2,7 +2,7 @@
 ## Makefile generated for component 'flightControlSystem'. 
 ## 
 ## Makefile     : flightControlSystem.mk
-## Generated on : Fri Feb 27 12:03:08 2026
+## Generated on : Thu Mar 05 15:46:46 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/flightControlSystem.so
 ## Product type : executable
 ## 
@@ -21,7 +21,7 @@ MAKEFILE                  = flightControlSystem.mk
 MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2025b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2025b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/vishu/MATLAB/Projects/examples/parrotMinidroneCompetition6/work
+START_DIR                 = D:/IITB_Mtech/Albatross_reborn/Albatross_reborn_Version_2/work
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
