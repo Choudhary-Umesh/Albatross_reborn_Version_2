@@ -2,7 +2,7 @@
 ## Makefile generated for component 'flightControlSystem'. 
 ## 
 ## Makefile     : flightControlSystem.mk
-## Generated on : Fri Mar 06 13:26:33 2026
+## Generated on : Fri Mar 06 14:28:55 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/flightControlSystem.so
 ## Product type : executable
 ## 
@@ -156,7 +156,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/include -I$(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/include -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -I$(MATLAB_ROOT)/extern/include/multimedia -I$(MATLAB_ROOT)/toolbox/vision/include -I$(START_DIR)/flightControlSystem_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils
+INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/include -I$(START_DIR)/flightControlSystem_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -177,7 +177,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_image.c $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_rtw.c $(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include/HostLib_Multimedia.c $(MATLAB_ROOT)/toolbox/vision/include/HostLib_Video.c $(START_DIR)/flightControlSystem_ert_rtw/flightControlSystem.c $(START_DIR)/flightControlSystem_ert_rtw/flightControlSystem_data.c $(START_DIR)/flightControlSystem_ert_rtw/rtGetInf.c $(START_DIR)/flightControlSystem_ert_rtw/rtGetNaN.c $(START_DIR)/flightControlSystem_ert_rtw/rt_nonfinite.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_control.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_of.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_vis.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/ptimer.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/controlCommand.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/mw_extrathreads.c
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_image.c $(START_DIR)/flightControlSystem_ert_rtw/flightControlSystem.c $(START_DIR)/flightControlSystem_ert_rtw/flightControlSystem_data.c $(START_DIR)/flightControlSystem_ert_rtw/rtGetInf.c $(START_DIR)/flightControlSystem_ert_rtw/rtGetNaN.c $(START_DIR)/flightControlSystem_ert_rtw/rt_nonfinite.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_control.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_of.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_vis.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/ptimer.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/controlCommand.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/mw_extrathreads.c
 
 ALL_SRCS = $(SRCS)
 
@@ -185,7 +185,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = rsedu_image.o DAHostLib_rtw.o HostLib_Multimedia.o HostLib_Video.o flightControlSystem.o flightControlSystem_data.o rtGetInf.o rtGetNaN.o rt_nonfinite.o rsedu_control.o rsedu_of.o rsedu_vis.o ptimer.o controlCommand.o mw_extrathreads.o
+OBJS = rsedu_image.o flightControlSystem.o flightControlSystem_data.o rtGetInf.o rtGetNaN.o rt_nonfinite.o rsedu_control.o rsedu_of.o rsedu_vis.o ptimer.o controlCommand.o mw_extrathreads.o
 
 ALL_OBJS = $(OBJS)
 
@@ -355,30 +355,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/vision/include/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/vision/include/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
 %.o : $(START_DIR)/flightControlSystem_ert_rtw/%.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
@@ -412,18 +388,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 
 
 rsedu_image.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/parrot/src/rsedu_image.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-DAHostLib_rtw.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_rtw.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-HostLib_Multimedia.o : $(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include/HostLib_Multimedia.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-HostLib_Video.o : $(MATLAB_ROOT)/toolbox/vision/include/HostLib_Video.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
